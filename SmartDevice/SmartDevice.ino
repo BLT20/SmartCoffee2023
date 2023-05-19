@@ -8,7 +8,7 @@ RTC_Millis rtc;     // Software Real Time Clock (RTC)
 DateTime rightNow;  // used to store the current time.
 
 // SD Card - Confirm Pin
-#define SDpin 53
+#define SDpin 10
 
 void setup() {
   // put your setup code here, to run once:
@@ -28,4 +28,35 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  userLocation();
+  cupLocation();
+  buttonPressed();
+  delay(250);
+}
+
+/*
+ Detects if the user is within range to activate the coffee machine.
+ @params User in range
+ @returns Check for cup
+ */
+void userLocation () {
+
+}
+
+/*
+ Detects if there is a coffee cup in the machine.
+ @params Cup in machine
+ @returns Make coffee
+ */
+void cupLocation () {
+
+}
+
+/*
+ Detects if the button is pressed, Manually activiating the coffee machine if the other functions fail.
+ @params Button pressed
+ @returns Make coffee
+ */
+void buttonPressed () {
+
 }
