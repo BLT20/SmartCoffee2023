@@ -9,10 +9,10 @@ I will be making a smart coffee maker. The theory is that the user can set a cof
 ## Behaviours
 
 1. Input - The user comes within the sonar range
-   Output - Make coffee if there is a cup
+   Output - Check if there is a cup in the machine
 
 2. Input - Sensor detects cup
-   Output - Make coffee if the user comes within the sonar range
+   Output - Make coffee
 
 3. Input - Button is pressed
    Output - Make coffee
