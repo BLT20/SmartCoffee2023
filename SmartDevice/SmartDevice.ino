@@ -25,10 +25,10 @@ void setup() {
   //    ;
   }
 // Real Time Clock (RTC)
-  rtc.begin(DateTime(F(__DATE__), F(__TIME__)));
-  Serial.println("initialization done.");
-logEvent("System Initialisation...");
-}
+//  rtc.begin(DateTime(F(__DATE__), F(__TIME__)));
+  //Serial.println("initialization done.");
+//logEvent("System Initialisation...");
+//}
 
 void loop() {
   // put your main code here, to run repeatedly:
@@ -40,8 +40,8 @@ void loop() {
 
 /*
  Detects if the user is within range to activate the coffee machine.
- @params User in range
- @returns Check for cup
+ @params none
+ @returns none
  */
 void userLocation () {
 digitalWrite(trigPin, LOW);
@@ -54,22 +54,31 @@ digitalWrite(trigPin, LOW);
 long duration = pulseIn(echoPin, HIGH);
 // Calculating the distance
 int distance = duration * 0.034 / 2; // Speed of sound wave divided by 2 (go and back)
+// read sonar
+// if user within range
+// read line sensor
 }
 
 /*
  Detects if there is a coffee cup in the machine.
- @params Cup in machine
- @returns Make coffee
+ @params none
+ @returns none
  */
 void cupLocation () {
 int lineSensorValue = digitalRead(lineSensorPin);
+// read line sensor
+// if true
+// activate machine
 }
 
 /*
  Detects if the button is pressed, Manually activiating the coffee machine if the other functions fail.
- @params Button pressed
- @returns Make coffee
+ @params none
+ @returns none
  */
 void buttonPressed () {
 int crashSensorValue = digitalRead(crashSensor);
+// read crash sensor
+// if true
+// activate machine
 }
