@@ -18,11 +18,11 @@ void setup() {
   }
 
   // SD Card initialisation
-  Serial.print("Initializing SD card...");
-  if (!SD.begin(SDpin)) {
-    Serial.println("initialization failed!");
-    while (1)
-      ;
+ // Serial.print("Initializing SD card...");
+//  if (!SD.begin(SDpin)) {
+  //  Serial.println("initialization failed!");
+  //  while (1)
+  //    ;
   }
 // Real Time Clock (RTC)
   rtc.begin(DateTime(F(__DATE__), F(__TIME__)));
